@@ -48,4 +48,4 @@ jobs:
           cd ~/my_projects/ttrpg_app/backend/user-service
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ttrpg-be-user-service:latest
           cd ../..
-          docker-compose up -d user-service
+          docker compose up -d user-service
