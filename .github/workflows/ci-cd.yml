@@ -3,7 +3,7 @@ name: User Service CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
