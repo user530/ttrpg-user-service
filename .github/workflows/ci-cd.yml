@@ -28,7 +28,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/user-service:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/ttrpg-be-user-service:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -46,6 +46,6 @@ jobs:
         key: ${{ secrets.VDS_PRIVATE_KEY }}
         script: |
           cd ~/my_projects/ttrpg_app/backend/user-service
-          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/user-service:latest
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ttrpg-be-user-service:latest
           cd ../..
           docker-compose up -d user-service
