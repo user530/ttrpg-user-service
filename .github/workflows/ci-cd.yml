@@ -45,7 +45,7 @@ jobs:
         username: ${{ secrets.VDS_USERNAME }}
         key: ${{ secrets.VDS_PRIVATE_KEY }}
         script: |
-          cd ~/my_projects/ttrpg_app/backend/user-service
+          cd ~/projects/ttrpg_app/backend/user-service
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/ttrpg-be-user-service:latest
           cd ../..
           docker compose up -d user-service
